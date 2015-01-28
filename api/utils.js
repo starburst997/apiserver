@@ -15,7 +15,7 @@ var utils = module.exports = {
     },
 
     fromTimestamp: function(date) {
-        return new Date(date * 1000);
+        return new Date((date - 5 * 60 * 60) * 1000);
     },
 
     getJSONValue: function(str) {
@@ -121,7 +121,7 @@ var utils = module.exports = {
         }
 
         var delta = Math.round((new Date() - date) / 1000);
-
+	
         var minute = 60,
             hour = minute * 60,
             day = hour * 24;
