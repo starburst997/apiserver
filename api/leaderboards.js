@@ -140,7 +140,7 @@ var leaderboards = module.exports = {
                           options.playerid, options.highest, options.source].join("."));
         score.points = options.points;
 	
-	score.date = datetime.utcnow.getTime() - datetime.utcnow.getTimezoneOffset() * 60 * 1000;
+	score.date = datetime.utcnow.getTime() / 1000 - datetime.utcnow.getTimezoneOffset() * 60;
 
         // check bans
 
